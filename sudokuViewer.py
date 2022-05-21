@@ -84,7 +84,6 @@ class SudokuViewer:
     def swap_mode(self):
         self.mode = (self.mode + 1) % 4
         self.i += 1
-        print(pygame.font.get_fonts()[self.i])
 
     def delete_squares(self):
         self.sudoku.delete_squares(self.marked)

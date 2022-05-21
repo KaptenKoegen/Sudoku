@@ -12,20 +12,21 @@ def _main():
     pygame.init()
 
     screen = pygame.display.set_mode((1400, 800))
-    #menu = Menu(screen)
-    #soduku = menu.main_menu()
-    #sudoku = Sudoku(9, 9)
-    #s_viewer = SudokuSetter(screen)
-    #s_viewer.game_loop()
+    menu = Menu(screen)
+    soduku = menu.main_menu()
+    sudoku = load_sudoku(-1)
+    s_viewer = SudokuViewer(sudoku, screen)
+    s_viewer.game_loop()
 
 
-    #
+    """
     sudoku = solveSudoku(load_sudoku(-1).squares, None)
     s = Sudoku(9, 9)
     print(sudoku)
     s.squares = [[Square(list(digit)[0]) for digit in row] for row in sudoku]
     s_viewer = SudokuViewer(s, screen)
     s_viewer.game_loop()
+    """
     pygame.quit()
 
 
